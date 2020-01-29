@@ -32,7 +32,7 @@ header{
     display: none;
     flex-flow: column wrap;
     width: 100vw;
-    height: 90vh;
+    height: 85vh;
     position: fixed;
     background-color: rgba(128,128,128,0);
     justify-content: space-evenly;
@@ -41,6 +41,7 @@ header{
     animation-duration: 1s;
     animation-direction: alternate;
     animation-name: slidein ;
+    font-size: 0.85em;
 }
 /*animation slide page*/
 @keyframes slidein {
@@ -96,9 +97,6 @@ header{
 }
 .description:nth-child(2n){
     text-align: center;
-}
-.Page{
-    font-size: 0.85em;
 }
 .center{
     display: flex;
@@ -399,6 +397,10 @@ header{
     body{
         align-items: center;
     }
+    .Page{
+        height: 95vh;
+        font-size: 1em;
+    }
 }
 @media (min-width: 1440px){
     .loadingbar{
@@ -407,9 +409,9 @@ header{
     h1{
         font-size: 0.6em;
     }
-
-
-
+    .Page{
+        height: 100vh;
+    }
 }
 @media (min-width: 1920px){
 *{
