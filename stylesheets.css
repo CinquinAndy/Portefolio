@@ -32,7 +32,7 @@ header{
     display: none;
     flex-flow: column wrap;
     width: 100vw;
-    height: 82vh;
+    height: 85vh;
     position: fixed;
     background-color: rgba(128,128,128,0);
     justify-content: space-evenly;
@@ -45,6 +45,9 @@ header{
 }
 .Page footer a i {
     font-size: 1em;
+}
+.Page footer{
+    margin-top: 5%;
 }
 /*animation slide page*/
 @keyframes slidein {
