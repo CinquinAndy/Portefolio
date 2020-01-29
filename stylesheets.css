@@ -17,7 +17,7 @@ body {
 h1 {
     z-index: 1;
     position: fixed;
-    top: 91%;
+    top: 95%;
     right: 1%;
     font-size: 0.3em;
     color: grey;
@@ -32,7 +32,7 @@ header{
     display: none;
     flex-flow: column wrap;
     width: 100vw;
-    height: 85vh;
+    height: 80vh;
     position: fixed;
     background-color: rgba(128,128,128,0);
     justify-content: space-evenly;
@@ -42,6 +42,9 @@ header{
     animation-direction: alternate;
     animation-name: slidein ;
     font-size: 0.85em;
+}
+.Page footer a i {
+    font-size: 1em;
 }
 /*animation slide page*/
 @keyframes slidein {
