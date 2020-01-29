@@ -409,6 +409,9 @@ header{
     .Page{
         font-size: 1em;
     }
+    .contact{
+        text-align: center;
+    }
 }
 @media (min-width: 1440px){
     .loadingbar{
