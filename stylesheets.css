@@ -42,7 +42,7 @@ header{
     animation-direction: alternate;
     animation-name: slidein ;
 }
-/*animation slide page*/
+/*animation - slide page*/
 @keyframes slidein {
     0%{
         margin-top: 100vh;
