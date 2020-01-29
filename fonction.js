@@ -119,7 +119,7 @@ function Rchange() {
             document.getElementsByClassName("ligne")[Rnb + 1].innerHTML += TableauResteLigne[Rnb][Ri];
             Ri++;
         } else {
-            if (Rnb >= 15) {
+            if (Rnb >= 12) {
                 Rreset = true;
             }
             Rnb++;
