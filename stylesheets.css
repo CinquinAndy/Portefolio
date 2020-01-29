@@ -97,6 +97,9 @@ header{
 .description:nth-child(2n){
     text-align: center;
 }
+.Page{
+    font-size: 0.85em;
+}
 .center{
     display: flex;
     justify-content: center;
