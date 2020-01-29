@@ -10,7 +10,7 @@ body {
     padding: 0;
     font-family: Consolas, serif;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
 }
 
@@ -392,6 +392,9 @@ header{
     }
     .timelinetext{
         width: auto;
+    }
+    body{
+        align-items: center;
     }
 }
 @media (min-width: 1440px){
