@@ -27,97 +27,139 @@ h1 {
     font-size: 0.3em;
     color: grey;
 }
-header{
+
+.redirection {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    position: fixed;
+    top: 3%;
+    right: 3%;
+}
+
+.redirection a {
+    margin: 5px;
+    color: white;
+    opacity: 0.8;
+    font-size: 1em;
+}
+
+header {
     align-items: center;
     display: flex;
     justify-content: center;
     margin: 1em;
 }
-.Page{
+
+footer {
+    position: fixed;
+    top: 105%;
+}
+
+.Page {
     display: none;
     flex-flow: column wrap;
     width: 100vw;
     height: 85vh;
     position: fixed;
-    background-color: rgba(128,128,128,0);
+    background-color: rgba(128, 128, 128, 0);
     justify-content: space-evenly;
     backdrop-filter: blur(4px);
     border-radius: 5px;
-    animation-duration: 1.2s;
-    animation-direction: alternate;
-    animation-name: slidein ;
+    animation-duration: 1s;
+    animation-name: slidein;
     font-size: 0.85em;
 }
-.PageZ{
-    height: auto;
-}
-.Page footer a i {
+
+footer a i {
     font-size: 1em;
 }
-.Page footer{
-    margin-top: 5%;
-}
+
 /*animation slide page*/
 @keyframes slidein {
-    0%{
+    0% {
         margin-top: 100vh;
     }
-    100%{
+    100% {
         margin-top: 0;
     }
 }
-.Page:nth-child(1){
+
+@keyframes slideout {
+    0% {
+        margin-top: 0;
+    }
+    100% {
+        margin-top: -100vh;
+    }
+}
+
+.Page:nth-child(1) {
     display: flex;
 }
+
 /*présentation accueil*/
-.ligne{
+.ligne {
     margin-left: 3%;
     color: white;
     text-align: left;
 }
-.Page footer{
+
+.Page footer {
     align-self: center;
 }
-.arrow_down{
-    color:white;
+
+.arrow_down {
+    color: white;
     font-size: 1.5em;
 }
-.arrow_down i:hover{
+
+.arrow_down i:hover {
     color: darkgrey;
 }
+
 /* Premiere page*/
 /*Liens en savoir plus*/
 
-#arrow_downz{
+#arrow_downz {
     color: white;
 }
 
-.general{
+.general {
     margin: 0 2em;
 }
-.iconz{
+
+.iconz {
     display: flex;
     align-items: center;
     margin: 0 0.5em 0 0;
     font-size: 1.5em;
 }
+
 /*deuxieme page*/
-.description{
+.description {
     margin: 0 2em;
 }
-.description:nth-child(2n) i{
+
+.description:nth-child(2n) i {
     margin: 0.5em;
     font-size: 1.5em;
 }
-.description:nth-child(2n){
+
+.description:nth-child(2n) {
     text-align: center;
 }
-.center{
+
+.center {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.center i{
+
+.center i {
     margin: 0.5em;
 }
 
@@ -133,10 +175,12 @@ header{
     position: relative;
     overflow: hidden;
 }
-.hvr-underline-from-left div, .hvr-underline-from-left i{
-    color:#8AF8FF;
+
+.hvr-underline-from-left div, .hvr-underline-from-left i {
+    color: #8AF8FF;
 }
-.hvr-underline-from-left i{
+
+.hvr-underline-from-left i {
     font-size: 1.5em;
 }
 
@@ -156,6 +200,7 @@ header{
     -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
 }
+
 .hvr-underline-from-left:hover:before, .hvr-underline-from-left:focus:before, .hvr-underline-from-left:active:before {
     right: 0;
 }
@@ -187,31 +232,6 @@ header{
     float: left;
 }
 
-#slider figure .carrousselBack:nth-child(1){
-    /*<img src="images/cinquinMaeva.png" alt="Site Maeva Cinquin">;*/
-    background-image:url("images/cinquinMaeva.png");
-}
-#slider figure .carrousselBack:nth-child(2){
-    /*<img src="images/Conseils.png" alt="Prise note conseil">*/
-    background-image:url("images/Conseils.png");
-}
-#slider figure .carrousselBack:nth-child(3){
-    /*<img src="images/Ifrocean.png" alt="Ifrocean Projet php">*/
-    background-image:url("images/Ifrocean.png");
-}
-#slider figure .carrousselBack:nth-child(4){
-    /*<img src="images/CinquinAndy.png" alt="Portefolio Andy">*/
-    background-image:url("images/CinquinAndy.png");
-}
-#slider figure .carrousselBack:nth-child(5){
-    /*<img src="images/BewSite.png" alt="Projet Bew">*/
-    background-image:url("images/BewSite.png");
-}
-#slider figure .carrousselBack:nth-child(6){
-    /*<img src="images/Endar.png" alt="Projet Endar">*/
-    background-image:url("images/Endar.png");
-}
-
 #slider {
     width: 60%;
     text-align: center;
@@ -225,7 +245,6 @@ header{
     justify-content: center;
     align-items: center;
 }
-
 
 /*Calculé pour 6 Images*/
 @keyframes slidy {
@@ -241,7 +260,7 @@ header{
     28.33% {
         left: -100%;
     }
-    33.33%{
+    33.33% {
         left: -200%;
     }
     45% {
@@ -281,26 +300,31 @@ header{
     -webkit-transition-property: transform;
     transition-property: transform;
 }
+
 .hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
 }
-#boxtimeline{
+
+#boxtimeline {
     display: flex;
     flex-flow: wrap;
     width: 100%;
     height: 100%;
 }
-#htimeline{
+
+#htimeline {
     display: flex;
     width: 100%;
 }
-#ftimeline{
+
+#ftimeline {
     display: flex;
     width: 100%;
     justify-content: center;
 }
-.timeline{
+
+.timeline {
     display: flex;
     background: linear-gradient(45deg, rgba(138, 248, 255, 0) 10%, rgba(138, 248, 255, 0.8) 70%);
     border: 1px solid #8AF8FF;
@@ -308,31 +332,36 @@ header{
     margin: 0 1.5em;
     width: 5%;
 }
-.timelinetext{
+
+.timelinetext {
     display: flex;
     flex-direction: column;
     width: 80%;
     justify-content: space-evenly;
 }
-.timelinetext article{
+
+.timelinetext article {
     margin: 0 1em 1em 0;
     justify-content: left;
 }
 
 
 /*experiences*/
-.experience i{
+.experience i {
     margin: 0 0.5em;
     font-size: 1.5em;
 }
-.experience svg{
+
+.experience svg {
     margin: 0 0.5em;
 }
-.titreExperience{
+
+.titreExperience {
     width: 100%;
     text-align: center;
 }
-.loadingbar{
+
+.loadingbar {
     display: flex;
     border: 1px solid #8AF8FF;
     border-radius: 20px;
@@ -340,123 +369,159 @@ header{
     height: 15px;
     margin: 0 1em 0 0.5em;
 }
+
 /*html*/
-.experience:nth-child(3) .loadingbar{
+.experience:nth-child(3) .loadingbar {
     background: linear-gradient(-45deg, rgba(138, 248, 255, 0) 10%, rgba(138, 248, 255, 0.8) 20%);
 }
+
 /*css*/
-.experience:nth-child(4) .loadingbar{
+.experience:nth-child(4) .loadingbar {
     background: linear-gradient(-45deg, rgba(138, 248, 255, 0) 10%, rgba(138, 248, 255, 0.8) 20%);
 }
+
 /*php*/
-.experience:nth-child(5) .loadingbar{
+.experience:nth-child(5) .loadingbar {
     background: linear-gradient(-45deg, rgba(138, 248, 255, 0) 20%, rgba(138, 248, 255, 0.8) 30%);
 }
+
 /*js*/
-.experience:nth-child(6) .loadingbar{
+.experience:nth-child(6) .loadingbar {
     background: linear-gradient(-45deg, rgba(138, 248, 255, 0) 30%, rgba(138, 248, 255, 0.8) 40%);
 }
+
 /*sql*/
-.experience:nth-child(7) .loadingbar{
+.experience:nth-child(7) .loadingbar {
     background: linear-gradient(-45deg, rgba(138, 248, 255, 0) 30%, rgba(138, 248, 255, 0.8) 40%);
 }
+
 /*bootstrap*/
-.experience:nth-child(9) .loadingbar{
+.experience:nth-child(9) .loadingbar {
     background: linear-gradient(-45deg, rgba(138, 248, 255, 0) 25%, rgba(138, 248, 255, 0.8) 35%);
 }
+
 /*photoshop*/
-.experience:nth-child(11) .loadingbar{
+.experience:nth-child(11) .loadingbar {
     background: linear-gradient(-45deg, rgba(138, 248, 255, 0) 30%, rgba(138, 248, 255, 0.8) 40%);
 }
+
 /*figma*/
-.experience:nth-child(12) .loadingbar{
+.experience:nth-child(12) .loadingbar {
     background: linear-gradient(-45deg, rgba(138, 248, 255, 0) 30%, rgba(138, 248, 255, 0.8) 40%);
 }
+
 /*github*/
-.experience:nth-child(13) .loadingbar{
+.experience:nth-child(13) .loadingbar {
     background: linear-gradient(-45deg, rgba(138, 248, 255, 0) 30%, rgba(138, 248, 255, 0.8) 40%);
 }
+
 /*english*/
-.experience:nth-child(15) .loadingbar{
+.experience:nth-child(15) .loadingbar {
     background: linear-gradient(-45deg, rgba(138, 248, 255, 0) 50%, rgba(138, 248, 255, 0.8) 60%);
 }
-.experience{
+
+.experience {
     display: flex;
     align-items: center;
     flex-flow: row;
     justify-content: space-evenly;
     height: 30px;
 }
-.svg{
+
+.svg {
     width: 30px;
 }
 
-.contact{
+.contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin: 0 2em;
 }
-.contact i{
+
+.contact i {
     margin: 0.5em;
     font-size: 1.5em;
 }
-@media (min-width: 768px){
-    .timeline{
+
+@media (min-width: 768px) {
+    .timeline {
         width: 3%;
     }
-    #boxtimeline{
+
+    #boxtimeline {
         justify-content: center;
     }
-    .timelinetext{
+
+    .timelinetext {
         width: auto;
     }
-    body{
-        align-items: center;
-    }
-    .Page{
+
+    .Page {
         font-size: 1em;
     }
-    .contact{
+
+    .contact {
         text-align: center;
     }
 }
-@media (min-width: 1440px){
-    .loadingbar{
-        height: 50%;
-    }
-    h1{
-        font-size: 0.6em;
-    }
-    .Page{
-        height: 100vh;
-    }
-}
-@media (min-width: 1920px){
-*{
-    text-align: center;
-}
-.timelinetext article{
-    text-align: left;
-}
-.experience{
-    font-size: 25px;
-}
-    .svg{
-        width: 80px;
-    }
-    .loadingbar{
+
+@media (min-width: 1440px) {
+    .loadingbar {
         height: 50%;
     }
 
-    .arrow_down i{
+    h1 {
+        font-size: 0.8em;
+    }
+
+    .redirection a {
+        font-size: 1.2em;
+    }
+}
+
+@media (min-width: 1920px) {
+    * {
+        text-align: center;
+    }
+
+    .timelinetext article {
+        text-align: left;
+    }
+
+    .experience {
+        font-size: 25px;
+    }
+
+    h1 {
+        font-size: 1.1em;
+    }
+    .redirection a {
+        font-size: 1.4em;
+    }
+
+    .svg {
+        width: 80px;
+    }
+
+    .loadingbar {
+        height: 50%;
+    }
+
+    .arrow_down i {
         font-size: 30px;
     }
-    #arrow_downz{
+
+    #arrow_downz {
         font-size: 30px;
     }
-    #svgEn{
+
+    #svgEn {
         width: 40px;
         height: 40px;
     }
-    #svgPs{
+
+    #svgPs {
         width: 35px;
         height: 35px;
     }
