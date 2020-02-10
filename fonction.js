@@ -193,10 +193,10 @@ function stop() {
 
 function Rchange() {
     if (Rreset) {
-        if ((Rchaine % 10) == 0) {
+        if ((Rchaine % 25) == 0) {
             document.getElementById("arrow_downz").style.color = "grey";
         }
-        if ((Rchaine % 20) == 0){
+        if ((Rchaine % 50) == 0){
             document.getElementById("arrow_downz").style.color = "white";
             Rchaine=0;
         }
