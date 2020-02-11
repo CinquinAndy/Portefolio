@@ -34,6 +34,7 @@ function clickSuite1_AfterAnimation() {
     Page1.style.marginTop="0";
     Page2.style.display="flex";
     stop();
+    Bouton_Arrow_down.setAttribute('onclick','clickSuite2()');
 }
 
 function clickSuite2(){
@@ -48,6 +49,7 @@ function clickSuite2_AfterAnimation(){
     Page2.style.animationName='slidein';
     Page2.style.marginTop="0";
     Page5.style.display="flex";
+    Bouton_Arrow_down.setAttribute('onclick','clickSuite5()');
 }
 
 function clickSuite2More(){
@@ -62,6 +64,7 @@ function clickSuite2More_AfterAnimation(){
     Page2.style.animationName='slidein';
     Page2.style.marginTop="0";
     Page3.style.display="flex";
+    Bouton_Arrow_down.setAttribute('onclick','clickSuite5()');
 }
 
 function clickSuite3(){
@@ -76,6 +79,7 @@ function clickSuite3_AfterAnimation(){
     Page3.style.animationName='slidein';
     Page3.style.marginTop="0";
     Page5.style.display="flex";
+    Bouton_Arrow_down.setAttribute('onclick','clickSuite5()');
 }
 
 function clickSuite3More(){
@@ -90,6 +94,7 @@ function clickSuite3More_AfterAnimation(){
     Page3.style.animationName='slidein';
     Page3.style.marginTop="0";
     Page4.style.display="flex";
+    Bouton_Arrow_down.setAttribute('onclick','clickSuite5()');
 }
 
 function clickSuite4(){
@@ -104,20 +109,32 @@ function clickSuite4_AfterAnimation(){
     Page4.style.animationName='slidein';
     Page4.style.marginTop="0";
     Page5.style.display="flex";
+    Bouton_Arrow_down.setAttribute('onclick','clickSuite5()');
 }
 
 function clickSuite5(){
     // click sur mes projets/réalisations -> go sur mes expériences 5->6
+    Page3.style.animationName='slideout';
+    Page3.style.marginTop="100vh";
+    Page4.style.animationName='slideout';
+    Page4.style.marginTop="100vh";
     Page5.style.animationName='slideout';
     Page5.style.marginTop="100vh";
     setTimeout(clickSuite5_AfterAnimation,1000);
 }
 function clickSuite5_AfterAnimation(){
     // click sur mes projets/réalisations -> go sur mes expériences 5->6
+    Page3.style.display="none";
+    Page3.style.animationName='slidein';
+    Page3.style.marginTop="0";
+    Page4.style.display="none";
+    Page4.style.animationName='slidein';
+    Page4.style.marginTop="0";
     Page5.style.display="none";
     Page5.style.animationName='slidein';
     Page5.style.marginTop="0";
     Page6.style.display="flex";
+    Bouton_Arrow_down.setAttribute('onclick','clickSuite6()');
 }
 
 function clickSuite6(){
@@ -132,6 +149,7 @@ function clickSuite6_AfterAnimation(){
     Page6.style.animationName='slidein';
     Page6.style.marginTop="0";
     Page7.style.display="flex";
+    Bouton_Arrow_down.setAttribute('onclick','clickSuite7()');
 }
 
 function clickSuite7(){
@@ -146,6 +164,7 @@ function clickSuite7_AfterAnimation(){
     Page7.style.animationName='slidein';
     Page7.style.marginTop="0";
     Page8.style.display="flex";
+    Bouton_Arrow_down.setAttribute('onclick','clickSuite8()');
 }
 
 function clickSuite8(){
@@ -160,6 +179,7 @@ function clickSuite8_AfterAnimation(){
     Page8.style.animationName='slidein';
     Page8.style.marginTop="0";
     Page1.style.display="flex";
+    Bouton_Arrow_down.setAttribute('onclick','clickSuite1()');
     interval=setInterval(change, 30);
     interval2=setInterval(Rchange, 30);
 }

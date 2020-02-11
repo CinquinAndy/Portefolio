@@ -7,7 +7,6 @@
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'UA-150969790-2');
     </script>
 
@@ -20,7 +19,7 @@
     <link rel="icon" type="image/png" href="images/code.png"/>
     <link rel="stylesheet" href="stylesheets.css">
     <link href="https://fonts.googleapis.com/css?family=Cookie|Kalam|Permanent+Marker&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/474f36629d.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/58f998f035.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <script src="fonction.js"></script>
@@ -43,12 +42,12 @@
     <article class="ligne"></article>
     <article class="ligne"></article>
     <article class="ligne"></article>
+</section>
 <footer>
-    <a href="#" class="arrow_down" onclick="clickSuite1()">
+    <a href="#" class="arrow_down" onclick="clickSuite1()" id="bouton_arrow_down">
         <i id="arrow_downz" class="fas fa-arrow-circle-down"></i>
     </a>
 </footer>
-</section>
 <h1>Developped by Cinquin Andy &copy;</h1>
 <div class="redirection">
 <a href="index.html"><i class="fas fa-home"></i></a>
@@ -75,11 +74,6 @@
             <div class="center">en savoir encore plus <i class="fas fa-angle-right"></i></div>
         </a>
     </article>
-    <footer>
-        <a href="#" class="arrow_down" onclick="clickSuite2()">
-            <i class="fas fa-arrow-circle-down"></i>
-        </a>
-    </footer>
 </section>
 
 <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
@@ -123,11 +117,6 @@
             <div class="center">en savoir encore plus <i class="fas fa-angle-right"></i></div>
         </a>
     </article>
-    <footer>
-        <a href="#" class="arrow_down" onclick="clickSuite3()">
-            <i class="fas fa-arrow-circle-down"></i>
-        </a>
-    </footer>
 </section>
 
 <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
@@ -165,11 +154,6 @@
         pour l'éducation, afin de facilité l'apprentissage des enfants et le travail des professeurs.
         <br>andy-cinquin.fr, mon site portefolio, que j'améliore constamment, qui est en soit mon petit labo du web ! ^^
     </article>
-    <footer>
-        <a href="#" class="arrow_down" onclick="clickSuite4()">
-            <i class="fas fa-arrow-circle-down"></i>
-        </a>
-    </footer>
 </section>
 
 <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
@@ -190,11 +174,6 @@
             </figure>
         </div>
     </div>
-    <footer>
-        <a href="#" class="arrow_down" onclick="clickSuite5()">
-            <i class="fas fa-arrow-circle-down"></i>
-        </a>
-    </footer>
 </section>
 
 <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
@@ -241,14 +220,7 @@
             <article>
                 <i class="fas fa-angle-left"></i> 2014 - Assistant administratif - Aquatair
             </article>
-
         </section>
-
-        <footer id="ftimeline">
-            <a href="#" class="arrow_down" onclick="clickSuite6()">
-                <i class="fas fa-arrow-circle-down"></i>
-            </a>
-        </footer>
     </div>
 </section>
 
@@ -328,11 +300,6 @@
         </div>
         <div class="loadingbar"></div>
     </article>
-    <footer>
-        <a href="#" class="arrow_down" onclick="clickSuite7()">
-            <i class="fas fa-arrow-circle-down"></i>
-        </a>
-    </footer>
 </section>
 
 <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
@@ -342,25 +309,20 @@
         <i class="iconz fas fa-heart"></i> Contact
     </header>
     <article class="contact">
-        <i class="fas fa-envelope"></i><a href="mailto:cinquin.andy@gmail.com">cinquin.andy@gmail.com</a>
+        <i class="fas fa-envelope"></i><a href="mailto:cinquin.andy@gmail.com"> cinquin.andy@gmail.com</a>
     </article>
     <article class="contact">
         <i class="fas fa-map-pin"></i> 72 Avenue Camus, Nantes
     </article>
     <article class="contact">
-        <i class="fas fa-mobile-alt"></i><a href="tel:+33621582684">06 21 58 26 84</a>
+        <i class="fas fa-mobile-alt"></i><a href="tel:+33621582684"> 06 21 58 26 84</a>
     </article>
     <article class="contact">
-        <i class="fab fa-linkedin"></i> <a href=https://www.linkedin.com/in/andy-cinquin" target="_blank">linkedin.com/in/andy-cinquin</a>
+        <i class="fab fa-linkedin"></i><a href=https://www.linkedin.com/in/andy-cinquin" target="_blank"> linkedin.com/in/andy-cinquin</a>
     </article>
     <article class="contact">
         <i class="fas fa-file-pdf"></i><a href="CvAndy.pdf" target="_blank"> Mon Curriculum Vitae</a>
     </article>
-    <footer>
-        <a href="#" class="arrow_down" onclick="clickSuite8()">
-            <i class="fas fa-arrow-circle-down"></i>
-        </a>
-    </footer>
 </section>
 
 <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
@@ -377,6 +339,7 @@
     let Page6 = document.getElementsByClassName("Page")[5];
     let Page7 = document.getElementsByClassName("Page")[6];
     let Page8 = document.getElementsByClassName("Page")[7];
+    let Bouton_Arrow_down=document.getElementById("bouton_arrow_down");
 
     let TableauPremiereLigne = [];
     TableauPremiereLigne[0] = ".. Cinquin Andy   |   ";
