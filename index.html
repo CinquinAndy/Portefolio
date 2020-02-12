@@ -43,12 +43,12 @@
     <article class="ligne"></article>
     <article class="ligne"></article>
 </section>
-<footer>
-    <a href="#" class="arrow_down" onclick="clickSuite1()" id="bouton_arrow_down">
+<footer onclick="clickSuite1()" id="bouton_arrow_down">
+    <a href="#" class="arrow_down">
         <i id="arrow_downz" class="fas fa-arrow-circle-down"></i>
     </a>
 </footer>
-<h1>Dev by Cinquin Andy &copy;</h1>
+<h1>by Cinquin Andy &copy;</h1>
 <div class="redirection">
 <a href="index.html"><i class="fas fa-home"></i></a>
 </div>
@@ -111,11 +111,11 @@
         Après beaucoup de changement dans ma vie... j’ai décidé de
         repartir de 0 et de rejoindre l’EPSI, à l’autre bout de la france.
     </article>
-    <article class="description">
         <!--        liens vers la suite de racontage de vie -->
-        <a class="hvr-underline-from-left" onclick="clickSuite3More()">
-            <div class="center"> en savoir encore plus <i class="fas fa-angle-right"></i></div>
-        </a>
+    <article class="general">
+    <a class="hvr-underline-from-left" onclick="clickSuite3More()">
+        <div class="center"> en savoir encore plus <i class="fas fa-angle-right"></i></div>
+    </a>
     </article>
 </section>
 
@@ -141,6 +141,20 @@
         Je suis également sportif, je fais beaucoup de vélo, course a pied ... foot, j'ai d'ailleurs été éducateur
         sportif à Sciez pour les U9 (8-9 ans)
     </article>
+    <!--        liens vers la suite de racontage de vie -->
+    <article class="general">
+        <a class="hvr-underline-from-left" onclick="clickSuite3More_Suite()">
+            <div class="center"> en savoir encore plus <i class="fas fa-angle-right"></i></div>
+        </a>
+    </article>
+</section>
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+<!-- option , detail 3 description légère-->
+<section class="Page">
+    <header>
+        <i class="iconz fas fa-redo-alt"></i> Mon histoire, Mes passions
+    </header>
     <article class="description">
         <i class="fas fa-code"></i>
     </article>
@@ -155,6 +169,8 @@
         <br>andy-cinquin.fr, mon site portefolio, que j'améliore constamment, qui est en soit mon petit labo du web ! ^^
     </article>
 </section>
+
+<!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
 
 <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
 <!-- deuxiéme section , présentation des projets-->
@@ -309,19 +325,19 @@
         <i class="iconz fas fa-heart"></i> Contact
     </header>
     <article class="contact">
-        <i class="fas fa-envelope"></i><a href="mailto:cinquin.andy@gmail.com"> cinquin.andy@gmail.com</a>
+        <i class="fas fa-envelope"></i><a href="mailto:cinquin.andy@gmail.com">- cinquin.andy@gmail.com</a>
     </article>
     <article class="contact">
-        <i class="fas fa-map-pin"></i> 72 Avenue Camus, Nantes
+        <i class="fas fa-map-pin"></i>- 72 Avenue Camus, Nantes
     </article>
     <article class="contact">
-        <i class="fas fa-mobile-alt"></i><a href="tel:+33621582684"> 06 21 58 26 84</a>
+        <i class="fas fa-mobile-alt"></i><a href="tel:+33621582684">- 06 21 58 26 84</a>
     </article>
     <article class="contact">
-        <i class="fab fa-linkedin"></i><a href=https://www.linkedin.com/in/andy-cinquin" target="_blank"> linkedin.com/in/andy-cinquin</a>
+        <i class="fab fa-linkedin"></i><a href=https://www.linkedin.com/in/andy-cinquin" target="_blank">- linkedin.com/in/andy-cinquin</a>
     </article>
     <article class="contact">
-        <i class="fas fa-file-pdf"></i><a href="CvAndy.pdf" target="_blank"> Mon Curriculum Vitae</a>
+        <i class="fas fa-file-pdf"></i><a href="CvAndy.pdf" target="_blank">- Mon Curriculum Vitae</a>
     </article>
 </section>
 
@@ -339,6 +355,7 @@
     let Page6 = document.getElementsByClassName("Page")[5];
     let Page7 = document.getElementsByClassName("Page")[6];
     let Page8 = document.getElementsByClassName("Page")[7];
+    let Page9 = document.getElementsByClassName("Page")[8];
     let Bouton_Arrow_down=document.getElementById("bouton_arrow_down");
 
     let TableauPremiereLigne = [];

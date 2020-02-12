@@ -48,7 +48,7 @@ function clickSuite2_AfterAnimation(){
     Page2.style.display="none";
     Page2.style.animationName='slidein';
     Page2.style.marginTop="0";
-    Page5.style.display="flex";
+    Page6.style.display="flex";
     Bouton_Arrow_down.setAttribute('onclick','clickSuite5()');
 }
 
@@ -78,10 +78,11 @@ function clickSuite3_AfterAnimation(){
     Page3.style.display="none";
     Page3.style.animationName='slidein';
     Page3.style.marginTop="0";
-    Page5.style.display="flex";
+    Page6.style.display="flex";
     Bouton_Arrow_down.setAttribute('onclick','clickSuite5()');
 }
 
+// ok ->
 function clickSuite3More(){
     // click pour en savoirs plus -> go sur mon histoire, passions -> 3->4
     Page3.style.animationName='slideout';
@@ -97,18 +98,33 @@ function clickSuite3More_AfterAnimation(){
     Bouton_Arrow_down.setAttribute('onclick','clickSuite5()');
 }
 
-function clickSuite4(){
-    // click sur Mon histoire, Mes passions -> go sur mes projets 4->5
+function clickSuite3More_Suite(){
+    // click pour en savoirs plus -> go sur mon histoire, passions -> 3->4
     Page4.style.animationName='slideout';
     Page4.style.marginTop="100vh";
+    setTimeout(clickSuite3More_AfterAnimation_Suite,1000);
+}
+function clickSuite3More_AfterAnimation_Suite(){
+    // click pour en savoirs plus -> go sur mon histoire, passions -> 3->4
+    Page4.style.display="none";
+    Page4.style.animationName='slidein';
+    Page4.style.marginTop="0";
+    Page6.style.display="flex";
+    Bouton_Arrow_down.setAttribute('onclick','clickSuite5()');
+}
+
+function clickSuite4(){
+    // click sur Mon histoire, Mes passions -> go sur mes projets 4->5
+    Page5.style.animationName='slideout';
+    Page5.style.marginTop="100vh";
     setTimeout(clickSuite4_AfterAnimation,1000);
 }
 function clickSuite4_AfterAnimation(){
     // click sur Mon histoire, Mes passions -> go sur mes projets 4->5
-    Page4.style.display="none";
-    Page4.style.animationName='slidein';
-    Page4.style.marginTop="0";
-    Page5.style.display="flex";
+    Page5.style.display="none";
+    Page5.style.animationName='slidein';
+    Page5.style.marginTop="0";
+    Page6.style.display="flex";
     Bouton_Arrow_down.setAttribute('onclick','clickSuite5()');
 }
 
@@ -120,6 +136,8 @@ function clickSuite5(){
     Page4.style.marginTop="100vh";
     Page5.style.animationName='slideout';
     Page5.style.marginTop="100vh";
+    Page6.style.animationName='slideout';
+    Page6.style.marginTop="100vh";
     setTimeout(clickSuite5_AfterAnimation,1000);
 }
 function clickSuite5_AfterAnimation(){
@@ -133,51 +151,54 @@ function clickSuite5_AfterAnimation(){
     Page5.style.display="none";
     Page5.style.animationName='slidein';
     Page5.style.marginTop="0";
-    Page6.style.display="flex";
+    Page6.style.display="none";
+    Page6.style.animationName='slidein';
+    Page6.style.marginTop="0";
+    Page7.style.display="flex";
     Bouton_Arrow_down.setAttribute('onclick','clickSuite6()');
 }
 
 function clickSuite6(){
     // click sur Expériences -> go sur mes compétences 6->7
-    Page6.style.animationName='slideout';
-    Page6.style.marginTop="100vh";
+    Page7.style.animationName='slideout';
+    Page7.style.marginTop="100vh";
     setTimeout(clickSuite6_AfterAnimation,1000);
 }
 function clickSuite6_AfterAnimation(){
     // click sur Expériences -> go sur mes compétences 6->7
-    Page6.style.display="none";
-    Page6.style.animationName='slidein';
-    Page6.style.marginTop="0";
-    Page7.style.display="flex";
+    Page7.style.display="none";
+    Page7.style.animationName='slidein';
+    Page7.style.marginTop="0";
+    Page8.style.display="flex";
     Bouton_Arrow_down.setAttribute('onclick','clickSuite7()');
 }
 
 function clickSuite7(){
     // click sur mes compétences -> go sur les contacts 7->8
-    Page7.style.animationName='slideout';
-    Page7.style.marginTop="100vh";
+    Page8.style.animationName='slideout';
+    Page8.style.marginTop="100vh";
     setTimeout(clickSuite7_AfterAnimation,1000);
 }
 function clickSuite7_AfterAnimation(){
     // click sur mes compétences -> go sur les contacts 7->8
-    Page7.style.display="none";
-    Page7.style.animationName='slidein';
-    Page7.style.marginTop="0";
-    Page8.style.display="flex";
+    Page8.style.display="none";
+    Page8.style.animationName='slidein';
+    Page8.style.marginTop="0";
+    Page9.style.display="flex";
     Bouton_Arrow_down.setAttribute('onclick','clickSuite8()');
 }
 
 function clickSuite8(){
     // click sur contact - retour accueil 8->1
-    Page8.style.animationName='slideout';
-    Page8.style.marginTop="100vh";
+    Page9.style.animationName='slideout';
+    Page9.style.marginTop="100vh";
     setTimeout(clickSuite8_AfterAnimation,1000);
 }
 function clickSuite8_AfterAnimation(){
     // click sur contact - retour accueil 8->1
-    Page8.style.display="none";
-    Page8.style.animationName='slidein';
-    Page8.style.marginTop="0";
+    Page9.style.display="none";
+    Page9.style.animationName='slidein';
+    Page9.style.marginTop="0";
     Page1.style.display="flex";
     Bouton_Arrow_down.setAttribute('onclick','clickSuite1()');
     interval=setInterval(change, 30);
