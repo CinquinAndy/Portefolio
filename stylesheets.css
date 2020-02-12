@@ -52,7 +52,7 @@ header {
 
 footer {
     position: fixed;
-    bottom: 10%;
+    top: 92%;
 }
 
 .Page {
