@@ -2,12 +2,12 @@
 
 * {
     box-sizing: border-box;
-    color: white;
-    background-color: #333333;
     font-family: 'Varela Round', sans-serif;
     text-decoration: none;
 }
-
+h1,svg,section,article,div,a,footer{
+    color: white;
+}
 body {
     width: 100%;
     margin: 0;
@@ -15,6 +15,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color: #333333;
 }
 
 header {
@@ -23,7 +24,7 @@ header {
     text-align: center;
 }
 
-.topAccueil{
+.topAccueil {
     flex-direction: column;
     align-items: center;
 }
@@ -34,48 +35,76 @@ h1 {
     margin: 0.5em;
 }
 
-section{
+section {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: 3em 1em 1em 1em;
+    padding: 1em 1em 2.5em 1em;
+    width: 100%;
+}
+
+section:nth-child(2n+1) {
+    background: #333333;
+}
+
+section:nth-child(2n) {
+    background: #222222;
 }
 
 footer {
-    display: flex;
-    margin: 1em;
+    width: 100%;
+    text-align: center;
+    padding: 1em;
+    justify-content: center;
+    align-items: center;
 }
 
-.background{
+.footer {
+    display: flex;
+    background: #444444;
+    width: 100%;
+    text-align: center;
+}
+
+.background {
     width: 100%;
 }
-#imageAccueil,#timeline{
+
+#imageAccueil, #timeline {
     max-width: 100%;
 }
 
 /* icon des sections */
 section > header > div {
     margin: 10px;
-    font-size: 1.4em;
+    font-size: 1.5em;
 }
-section > header{
+
+section > header {
     margin: 1em;
 }
+
 /* textes des sections */
-section>article {
+section > article {
     text-align: center;
 }
+
 section article div {
-    margin: 2px;
+    margin: 3px 5px;
     text-align: center;
     display: inline-block;
 }
 
-#contact article{
+#contact article {
     justify-content: center;
     flex-direction: row;
 }
+
+#accueil {
+    padding: 2em 0 3em 0;
+}
+
 /*animation slide page*/
 /* Carroussel */
 
@@ -120,75 +149,118 @@ section article div {
     border: solid black 2px;
     border-radius: 7px;
 }
+#middle{
+    width: 100%;
+}
 
+article:hover div,a:hover div, article:hover .iconHover,a:hover{
+    color: #999999;
+}
+.iconHover{
+    color: #319ed5;
+}
+.colorBlue{
+    color: #4428e2;
+}
 
 @keyframes slidy {
     0% {
         left: 0;
     }
-    5%{
+    5% {
         left: 0;
     }
-    10%{
+    10% {
         left: -100%;
     }
-    15%{
+    15% {
         left: -100%;
     }
-    20%{
+    20% {
         left: -200%;
     }
-    25%{
+    25% {
         left: -200%;
     }
-    30%{
+    30% {
         left: -300%;
     }
-    35%{
+    35% {
         left: -300%;
     }
-    40%{
+    40% {
         left: -400%;
     }
-    45%{
+    45% {
         left: -400%;
     }
-    50%{
+    50% {
         left: -500%;
     }
-    55%{
+    55% {
         left: -500%;
     }
-    60%{
+    60% {
         left: -600%;
     }
-    65%{
+    65% {
         left: -600%;
     }
-    70%{
+    70% {
         left: -700%;
     }
-    75%{
+    75% {
         left: -700%;
     }
-    80%{
+    80% {
         left: -800%;
     }
-    85%{
+    85% {
         left: -800%;
     }
-    90%{
+    90% {
         left: -900%;
     }
-    95%{
+    95% {
         left: -900%;
     }
-    100%{
+    100% {
         left: 0;
     }
 }
 
+
+@media (min-width: 680px) {
+    * {
+        font-size: 1.05em;
+    }
+    h1 {
+        font-size: 2em;
+    }
+    section > header > div {
+        font-size: 1.9em;
+        margin: 20px;
+    }
+    section article div {
+        margin: 5px 8px;
+    }
+    section{
+        padding: 2em 2em 5em 2em;
+    }
+}
 
 @media (min-width: 1440px) {
-
+    section {
+        flex-wrap: wrap;
+        flex-direction: row;
+        width: 100%;
+    }
+    section > header {
+        margin: 1em;
+        width: 100%;
+    }
+    section > article {
+        width: 33.3%;
+    }
 }
+
