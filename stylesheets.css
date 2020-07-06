@@ -9,43 +9,73 @@
 }
 
 body {
+    width: 100%;
     margin: 0;
     padding: 0;
     display: flex;
-    align-items: flex-start;
+    flex-direction: column;
     justify-content: center;
-}
-
-h1 {
-
 }
 
 header {
-    align-items: center;
     display: flex;
     justify-content: center;
+    text-align: center;
+}
+
+.topAccueil{
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.5em;
+    margin: 0.5em;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 3em 1em 1em 1em;
 }
 
 footer {
-
+    display: flex;
+    margin: 1em;
 }
 
-.background {
-
+.background{
+    width: 100%;
 }
-/* titre des sections */
-section > header {
-
+#imageAccueil{
+    max-width: 100%;
 }
-/* icon des setions */
-section > header > i {
 
+/* icon des sections */
+section > header > div {
+    margin: 10px;
+    font-size: 1.4em;
+}
+section > header{
+    margin: 1em;
 }
 /* textes des sections */
-section > article {
-
+section>article {
+    text-align: center;
+}
+section article div {
+    margin: 2px;
+    text-align: center;
+    display: inline-block;
 }
 
+#contact article{
+    justify-content: center;
+    flex-direction: row;
+}
 /*animation slide page*/
 /* Carroussel */
 
@@ -69,16 +99,16 @@ section > article {
 
 #slider figure {
     position: relative;
-    width: 600%;
+    width: 1000%;
     margin: 0;
     padding: 0;
     font-size: 0;
     text-align: left;
-    animation: 21s slidy infinite;
+    animation: 35s slidy infinite;
 }
 
 #slider figure img {
-    width: 16.66%;
+    width: 10.00%;
     height: auto;
     float: left;
 }
@@ -92,49 +122,68 @@ section > article {
 }
 
 
-/*Calculé pour 6 Images*/
-/* 100 / 6 = 16.6 */
-/* 16.6 * 2 = 33.3 */
-/* 16.6 - 5 = 11.6 */
-/* 33.3 - 5 = 28.3 */
 @keyframes slidy {
     0% {
         left: 0;
     }
-    11.66% {
+    5%{
         left: 0;
     }
-    16.66% {
+    10%{
         left: -100%;
     }
-    28.33% {
+    15%{
         left: -100%;
     }
-    33.33% {
+    20%{
         left: -200%;
     }
-    45% {
+    25%{
         left: -200%;
     }
-    50% {
+    30%{
         left: -300%;
     }
-    61.66% {
+    35%{
         left: -300%;
     }
-    66.66% {
+    40%{
         left: -400%;
     }
-    78.33% {
+    45%{
         left: -400%;
     }
-    83.33% {
+    50%{
         left: -500%;
     }
-    95.00% {
+    55%{
         left: -500%;
     }
-    100% {
+    60%{
+        left: -600%;
+    }
+    65%{
+        left: -600%;
+    }
+    70%{
+        left: -700%;
+    }
+    75%{
+        left: -700%;
+    }
+    80%{
+        left: -800%;
+    }
+    85%{
+        left: -800%;
+    }
+    90%{
+        left: -900%;
+    }
+    95%{
+        left: -900%;
+    }
+    100%{
         left: 0;
     }
 }
