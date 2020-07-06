@@ -319,10 +319,7 @@
     <article>
         <!--        todo Time line parcours phone (ok) & desktop (ok) -->
         <!--        todo changer l'image de la timeline suivant taille ecran -->
-        <div class="background">
-            <!--        delai sur l'envois de l'image / après chargement de la page -->
-            <img src="images/LogoAnimated_1_noLoop.png" alt="logoAnimee">
-        </div>
+        <img src="" id="timeline" alt="Phrise Chronologique">
     </article>
 </section>
 <section>
@@ -356,11 +353,30 @@
 <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
 <!-- script -->
 <script>
+    var dansLaFenetre = function (element) {
+        var position = element.getBoundingClientRect();
+        return (
+            position.top >= 0 &&
+            position.left >= 0 &&
+            position.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            position.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    };
     window.onresize = changementtaillefenetre;
+    let imageTimeline = document.getElementById("timeline");
+    let dansLaFenetreFlag = "false";
     window.onload = function () {
         let imageAccueil = document.getElementById("imageAccueil");
         imageAccueil.setAttribute("src", "LogoAnimated_Glow_noLoop.png");
         changementtaillefenetre()
+    };
+    window.onscroll = function () {
+        if (dansLaFenetreFlag === "false") {
+            if (dansLaFenetre(imageTimeline)) {
+                imageTimeline.setAttribute("src", "LogoAnimated_Glow_noLoop.png");
+                dansLaFenetreFlag = "true";
+            }
+        }
     };
 </script>
 </body>
