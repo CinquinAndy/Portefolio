@@ -5,9 +5,11 @@
     font-family: 'Varela Round', sans-serif;
     text-decoration: none;
 }
-h1,svg,section,article,div,a,footer{
+
+h1, svg, section, article, div, a, footer {
     color: white;
 }
+
 body {
     width: 100%;
     margin: 0;
@@ -22,6 +24,7 @@ header {
     display: flex;
     justify-content: center;
     text-align: center;
+    font-weight: bold;
 }
 
 .topAccueil {
@@ -29,9 +32,22 @@ header {
     align-items: center;
 }
 
+.imagesDescription {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+}
+
+.imagesDescription img {
+    max-width: 100%;
+}
+
 h1 {
     text-align: center;
-    font-size: 1.5em;
+    font-size: 1.6em;
+    font-weight: bold;
     margin: 0.5em;
 }
 
@@ -58,6 +74,7 @@ footer {
     padding: 1em;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .footer {
@@ -149,17 +166,20 @@ section article div {
     border: solid black 2px;
     border-radius: 7px;
 }
-#middle{
+
+#middle {
     width: 100%;
 }
 
-article:hover div,a:hover div, article:hover .iconHover,a:hover{
+article:hover div, a:hover div, article:hover .iconHover, a:hover {
     color: #999999;
 }
-.iconHover{
+
+.iconHover {
     color: #319ed5;
 }
-.colorBlue{
+
+.colorBlue {
     color: #4428e2;
 }
 
@@ -234,17 +254,21 @@ article:hover div,a:hover div, article:hover .iconHover,a:hover{
     * {
         font-size: 1.05em;
     }
+
     h1 {
-        font-size: 2em;
+        font-size: 2.2em;
     }
+
     section > header > div {
         font-size: 1.9em;
         margin: 20px;
     }
+
     section article div {
         margin: 5px 8px;
     }
-    section{
+
+    section {
         padding: 2em 2em 5em 2em;
     }
 }
@@ -255,10 +279,12 @@ article:hover div,a:hover div, article:hover .iconHover,a:hover{
         flex-direction: row;
         width: 100%;
     }
+
     section > header {
         margin: 1em;
         width: 100%;
     }
+
     section > article {
         width: 33.3%;
     }

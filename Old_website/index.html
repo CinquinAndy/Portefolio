@@ -5,7 +5,11 @@
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-150969790-2"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
         gtag('js', new Date());
         gtag('config', 'UA-150969790-2');
     </script>
@@ -50,7 +54,7 @@
 </footer>
 <h1>by Cinquin Andy &copy;</h1>
 <div class="redirection">
-<a href="index.html"><i class="fas fa-home"></i></a>
+    <a href="index.html"><i class="fas fa-home"></i></a>
 </div>
 <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
 <!--premiere page, description légère-->
@@ -111,11 +115,11 @@
         Après beaucoup de changement dans ma vie... j’ai décidé de
         repartir de 0 et de rejoindre l’EPSI, à l’autre bout de la france.
     </article>
-        <!--        liens vers la suite de racontage de vie -->
+    <!--        liens vers la suite de racontage de vie -->
     <article class="general">
-    <a class="hvr-underline-from-left" onclick="clickSuite3More()">
-        <div class="center"> en savoir encore plus <i class="fas fa-angle-right"></i></div>
-    </a>
+        <a class="hvr-underline-from-left" onclick="clickSuite3More()">
+            <div class="center"> en savoir encore plus <i class="fas fa-angle-right"></i></div>
+        </a>
     </article>
 </section>
 
@@ -181,12 +185,22 @@
     <div id="middle" class="hvr-grow">
         <div id="slider">
             <figure>
-                <a href="https://www.cinquin-maeva.com" target="_blank"><img id="premiereImageCarroussel" src="images/cinquinMaevaPhone.png" alt="Site Maeva Cinquin"></a>
-                <a href="https://github.com/CinquinAndy/ConseilsDeClasse" target="_blank"><img id="deuxiemeImageCarroussel" src="images/ConseilsPhone.png" alt="Prise note conseil"></a>
-                <a href="https://gitlab.com/WadeFade/projet-classe-ifrocean" target="_blank"><img id="troisiemeImageCarroussel"  src="images/IfroceanPhone.png" alt="Ifrocean Projet php"></a>
-                <a href="https://github.com/CinquinAndy/Portefolio" target="_blank"><img id="quatriemeImageCarroussel" src="images/CinquinAndyPhone.png" alt="Portefolio Andy"></a>
-                <a href="https://github.com/WadeFade/ProjetHTML" target="_blank"><img id="cinquiemeImageCarroussel" src="images/BewSitePhone.png" alt="Projet Bew"></a>
-                <a href="https://github.com/bew165/Endar" target="_blank"><img id="sixiemeImageCarroussel" src="images/EndarPhone.png" alt="Projet Endar"></a>
+                <a href="https://www.cinquin-maeva.com" target="_blank"><img id="premiereImageCarroussel"
+                                                                             src="images/cinquinMaevaPhone.png"
+                                                                             alt="Site Maeva Cinquin"></a>
+                <a href="https://github.com/CinquinAndy/ConseilsDeClasse" target="_blank"><img
+                        id="deuxiemeImageCarroussel" src="images/ConseilsPhone.png" alt="Prise note conseil"></a>
+                <a href="https://gitlab.com/WadeFade/projet-classe-ifrocean" target="_blank"><img
+                        id="troisiemeImageCarroussel" src="images/IfroceanPhone.png" alt="Ifrocean Projet php"></a>
+                <a href="https://github.com/CinquinAndy/Portefolio" target="_blank"><img id="quatriemeImageCarroussel"
+                                                                                         src="images/CinquinAndyPhone.png"
+                                                                                         alt="Portefolio Andy"></a>
+                <a href="https://github.com/WadeFade/ProjetHTML" target="_blank"><img id="cinquiemeImageCarroussel"
+                                                                                      src="images/BewSitePhone.png"
+                                                                                      alt="Projet Bew"></a>
+                <a href="https://github.com/bew165/Endar" target="_blank"><img id="sixiemeImageCarroussel"
+                                                                               src="images/EndarPhone.png"
+                                                                               alt="Projet Endar"></a>
             </figure>
         </div>
     </div>
@@ -333,7 +347,8 @@
         <i class="fas fa-mobile-alt"></i><a href="tel:+33621582684">- 06 21 58 26 84</a>
     </article>
     <article class="contact">
-        <i class="fab fa-linkedin"></i><a href="https://www.linkedin.com/in/andy-cinquin" target="_blank">- linkedin.com/in/andy-cinquin</a>
+        <i class="fab fa-linkedin"></i><a href="https://www.linkedin.com/in/andy-cinquin" target="_blank">-
+        linkedin.com/in/andy-cinquin</a>
     </article>
     <article class="contact">
         <i class="fas fa-file-pdf"></i><a href="CvAndy.pdf" target="_blank">- Mon Curriculum Vitae</a>
@@ -344,7 +359,9 @@
 <!-- script -->
 <script>
     window.onresize = changementtaillefenetre;
-    window.onload = function(){changementtaillefenetre()};
+    window.onload = function () {
+        changementtaillefenetre()
+    };
 
     let Page1 = document.getElementsByClassName("Page")[0];
     let Page2 = document.getElementsByClassName("Page")[1];
@@ -355,7 +372,7 @@
     let Page7 = document.getElementsByClassName("Page")[6];
     let Page8 = document.getElementsByClassName("Page")[7];
     let Page9 = document.getElementsByClassName("Page")[8];
-    let Bouton_Arrow_down=document.getElementById("bouton_arrow_down");
+    let Bouton_Arrow_down = document.getElementById("bouton_arrow_down");
 
     let TableauPremiereLigne = [];
     TableauPremiereLigne[0] = ".. Cinquin Andy   |   ";
@@ -388,8 +405,8 @@
     let Rreset = false;
     let Rchaine = 0;
 
-    interval=setInterval(change, 30);
-    interval2=setInterval(Rchange, 30);
+    interval = setInterval(change, 30);
+    interval2 = setInterval(Rchange, 30);
     // load de la page complette lance le script de particle js
     document.onload(particlesJS("particles-js", {
         "particles": {
