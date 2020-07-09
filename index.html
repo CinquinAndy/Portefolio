@@ -32,9 +32,7 @@
 <header class="topAccueil" id="accueil">
     <h1><&nbsp;Cinquin Andy <br>Développeur informatique Freelance&nbsp;/></h1>
     <div class="background">
-        <!-- todo changement de l'image -->
-        <!--        delai sur l'envois de l'image / après chargement de la page -->
-        <img id="imageAccueil" src="LogoOffi glow_00000.png" alt="logoAnimee">
+        <img id="imageAccueil" src="images/logoAnimeeNoLoop_End_firstframe.png" alt="logoAnimee">
     </div>
 </header>
 <section>
@@ -45,10 +43,10 @@
     <article>
         Je m’appelle Andy Cinquin, j’ai 22 ans, je suis développeur Freelance,
         <br>et étudiant à L’EPSI Nantes en deuxième année.
-        <br><br>Passionné par tous ce qui touche à l’informatique depuis tout petit,
+        <br><br>Passionné par tout ce qui touche à l’informatique depuis tout petit,
         <br>je porte un grand intérêt pour les différents langages et techniques de développement informatique.
         <br><br>
-        J’ai ma micro entreprise depuis debut 2020, je fais des projets professionnels afin de mettre en application et
+        J’ai ma micro entreprise depuis début 2020, je fais des projets professionnels afin de mettre en application et
         d’approfondir les connaissances obtenues lors de mes études.
     </article>
 </section>
@@ -58,10 +56,10 @@
         <div>Professionnel</div>
     </header>
     <article>
-        Création de site vitrine, évènementiel, E-commerce...
-        <br>Application sur-mesure.
+        Création de sites vitrine, évènementiels, E-commerce...
+        <br>Application sur mesure.
         <br>&
-        <br>Conseils, Réparation et maintenance d'appareil informatique.
+        <br>Conseils, réparation et maintenance d'appareil informatique.
         <br>&
         <br>Identité graphique, création de logo (animé ou non).
         <br>&
@@ -100,13 +98,13 @@
                 <a href="https://www.figma.com/file/CuDaNN3HxJlhEwzJKpFeva/Tra%C3%A7abilit%C3%A9-hublot?node-id=21%3A15"
                    target="_blank"><img id="septiemeImageCarroussel" src="images/HublotPhone.png"
                                         alt="Stage Hublot"></a>
-                <a href="CarteDeVisite_CinquinAndy.pdf" target="_blank"><img id="huitiemeImageCarroussel" src="images/LogoPersoPhone.png"
-                                        alt="Projet Logo Perso"></a>
+                <a href="CarteDeVisite_CinquinAndy.pdf" target="_blank"><img id="huitiemeImageCarroussel"
+                                                                             src="images/LogoPersoPhone.png"
+                                                                             alt="Projet Logo Perso"></a>
                 <a href="https://github.com/CinquinAndy/Portefolio"><img id="neuviemeImageCarroussel"
                                                                          src="images/PortefolioV2Phone.png"
                                                                          alt="Projet Portefolio V2"></a>
-                <!--                todo add liens video projet Alice -->
-                <a href="youtube.com" target="_blank">
+                <a href="https://youtu.be/vDPrLWBX7R4" target="_blank">
                     <img id="dixiemeImageCarroussel" src="images/ProjetRetroAlicePhone.png" alt="Projet Video Retro">
                 </a>
             </figure>
@@ -169,6 +167,7 @@
             <i class="fas fa-file-word iconHover"></i>&nbsp;&nbsp;Vba Excel & Word
         </div>
     </article>
+    <!--    C / C++-->
 </section>
 <section>
     <header>
@@ -219,14 +218,12 @@
             <i class="fab fa-slack iconHover"></i>&nbsp;&nbsp;Slack
         </div>
     </article>
-
     <article>
         <div>
             <i class="fas fa-chart-line iconHover"></i>&nbsp;&nbsp;Google Analytics
         </div>
     </article>
     <article>
-        <div></div>
         <div>
             <i class="fab fa-microsoft iconHover"></i>&nbsp;&nbsp;Azure devOps
         </div>
@@ -238,22 +235,19 @@
     </article>
     <article>
         <div>
-            <i class="fab fa-fedora iconHover"></i>&nbsp;&nbsp;Liinux (Debian / Kali / Fedora...)
+            <i class="fab fa-fedora iconHover"></i>&nbsp;&nbsp;Linux (Debian / Kali / Fedora...)
         </div>
     </article>
 </section>
 <section>
     <header>
         <div><i class="fas fa-project-diagram"></i></div>
-        <div>Parcours</div>
+        <div id="parcours">Parcours</div>
     </header>
-    <article>
-        <!--        todo Time line parcours phone (ok) & desktop (ok) -->
-        <!--        todo changer l'image de la timeline suivant taille ecran -->
-        <img src="" id="timeline" alt="Frise Chronologique">
-    </article>
+    <div id="friseDesktop"></div>
+    <div id="frisePhone"></div>
 </section>
-<section>
+<section id="contact">
     <header>
         <div><i class="fas fa-address-book"></i></div>
         <div>Contact</div>
@@ -286,7 +280,11 @@
 
 <!-- ///////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
 <!-- script -->
+<script src="lottie.js"></script>
+<script src="frisePhone.js"></script>
+<script src="friseDesktop.js"></script>
 <script>
+    parcours = document.getElementById("parcours");
     var dansLaFenetre = function (element) {
         var position = element.getBoundingClientRect();
         return (
@@ -299,21 +297,21 @@
     window.onresize = function () {
         changementtaillefenetre();
     };
-    let imageTimeline = document.getElementById("timeline");
-    let dansLaFenetre_Flag = "false";
+
     window.onload = function () {
         let imageAccueil = document.getElementById("imageAccueil");
-        imageAccueil.setAttribute("src", "LogoAnimated_Glow_noLoop.png");
+        imageAccueil.setAttribute("src", "images/logoAnimeeNoLoop_End.png");
         changementtaillefenetre();
+        if (dansLaFenetre(parcours)) {
+            animationPhone.play();
+            animationDesktop.play();
+        }
     };
     window.onscroll = function () {
-        if (dansLaFenetre_Flag === "false") {
-            if (dansLaFenetre(imageTimeline)) {
-                imageTimeline.setAttribute("src", "LogoAnimated_Glow_noLoop.png");
-                dansLaFenetre_Flag = "true";
-            }
+        if (dansLaFenetre(parcours)) {
+            animationPhone.play();
+            animationDesktop.play();
         }
     };
 </script>
-</body>
 </html>
