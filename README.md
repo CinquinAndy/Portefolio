@@ -7,4 +7,4 @@ Première version 'orignal', mais pas compatible sur beaucoup de navigateur & ap
 
 Seconde version plus lourde, mais avec une plus grande compatibilité.
 (milieu 2020)
-+ animation -> tout fait main
++ animation -> tout fait à la main
