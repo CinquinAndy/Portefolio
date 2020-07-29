@@ -28,6 +28,11 @@
 </head>
 
 <body>
+<div id="loader">
+    <div class="loadingio-spinner-ripple-b4j2fudxuca"><div class="ldio-q5lgd6ryx3e">
+        <div></div><div></div>
+    </div></div>
+</div>
 <header class="topAccueil" id="accueil">
     <h1><&nbsp;Cinquin Andy&nbsp;/><br><&nbsp;Développeur informatique Freelance&nbsp;/></h1>
     <div class="background">
@@ -299,12 +304,14 @@
 
     window.onload = function () {
         let imageAccueil = document.getElementById("imageAccueil");
-        imageAccueil.setAttribute("src", "images/logoAnimeeNoLoop_End.png");
         changementtaillefenetre();
         if (dansLaFenetre(parcours)) {
             animationPhone.play();
             animationDesktop.play();
         }
+        setTimeout(function(){imageAccueil.setAttribute("src", "images/logoAnimeeNoLoop_End.png");},1000);
+        setTimeout(function(){document.getElementById("loader").style.opacity = '0%';},1000);
+        setTimeout(function(){document.getElementById("loader").style.display = 'none';},1400);
     };
     window.onscroll = function () {
         if (dansLaFenetre(parcours)) {
