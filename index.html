@@ -25,14 +25,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/58f998f035.js" crossorigin="anonymous"></script>
     <script src="fonction.js"></script>
-    <link rel="canonical" href="https://www.andy-cinquin.fr/" />
+    <link rel="canonical" href="https://www.andy-cinquin.fr/"/>
 </head>
 
 <body>
 <div id="loader">
-    <div class="loadingio-spinner-ripple-b4j2fudxuca"><div class="ldio-q5lgd6ryx3e">
-        <div></div><div></div>
-    </div></div>
+    <div class="loadingio-spinner-ripple-b4j2fudxuca">
+        <div class="ldio-q5lgd6ryx3e">
+            <div></div>
+            <div></div>
+        </div>
+    </div>
 </div>
 <header class="topAccueil" id="accueil">
     <h1><&nbsp;Cinquin Andy&nbsp;/><br><&nbsp;Développeur Freelance Nantes&nbsp;/></h1>
@@ -80,38 +83,18 @@
         <div>Mes projets</div>
     </header>
     <article id="middle">
-        <div id="slider">
+        <div id="slider" onclick="window.location=('https://www.andy-cinquin.fr/descriptionProjet')">
             <figure>
-                <a href="https://www.cinquin-maeva.com" target="_blank"><img id="premiereImageCarroussel"
-                                                                             src="images/cinquinMaevaPhone.png"
-                                                                             alt="Site Maeva Cinquin - Maquilleuse professionnelle"></a>
-                <a href="https://github.com/CinquinAndy/ConseilsDeClasse" target="_blank"><img
-                        id="deuxiemeImageCarroussel" src="images/ConseilsPhone.png" alt="Prise note conseil"></a>
-                <a href="https://gitlab.com/WadeFade/projet-classe-ifrocean" target="_blank"><img
-                        id="troisiemeImageCarroussel" src="images/IfroceanPhone.png" alt="Ifrocean Projet php"></a>
-                <!-- added -->
-                <a href="Old_website/index.html" target="_blank"><img id="quatriemeImageCarroussel"
-                                                                      src="images/CinquinAndyPhone.png"
-                                                                      alt="Portefolio Andy"></a>
-                <a href="https://github.com/WadeFade/ProjetHTML" target="_blank"><img id="cinquiemeImageCarroussel"
-                                                                                      src="images/BewSitePhone.png"
-                                                                                      alt="Projet Bew"></a>
-                <a href="https://github.com/bew165/Endar" target="_blank"><img id="sixiemeImageCarroussel"
-                                                                               src="images/EndarPhone.png"
-                                                                               alt="Projet Endar"></a>
-                <!-- added -->
-                <a href="https://www.figma.com/file/CuDaNN3HxJlhEwzJKpFeva/Tra%C3%A7abilit%C3%A9-hublot?node-id=21%3A15"
-                   target="_blank"><img id="septiemeImageCarroussel" src="images/HublotPhone.png"
-                                        alt="Stage Hublot"></a>
-                <a href="CarteDeVisite_CinquinAndy.pdf" target="_blank"><img id="huitiemeImageCarroussel"
-                                                                             src="images/LogoPersoPhone.png"
-                                                                             alt="Projet Logo Perso"></a>
-                <a href="https://github.com/CinquinAndy/Portefolio"><img id="neuviemeImageCarroussel"
-                                                                         src="images/PortefolioV2Phone.png"
-                                                                         alt="Projet Portefolio V2"></a>
-                <a href="https://youtu.be/vDPrLWBX7R4" target="_blank">
-                    <img id="dixiemeImageCarroussel" src="images/ProjetRetroAlicePhone.png" alt="Projet Video Retro">
-                </a>
+                <a><img id="premiereImageCarroussel" src="images/cinquinMaevaPhone.png" alt="Site Maeva Cinquin - Maquilleuse professionnelle"></a>
+                <a><img id="deuxiemeImageCarroussel" src="images/ConseilsPhone.png" alt="Prise note conseil"></a>
+                <a><img id="imagePresentationTutorat" src="images/scratchOverflowPhone.jpg" alt="WebApp - Tutorat - ScratchOverflow - Entraide"></a>
+                <a><img id="quatriemeImageCarroussel" src="images/CinquinAndyPhone.png" alt="Portefolio Andy"></a>
+                <a><img id="cinquiemeImageCarroussel" src="images/BewSitePhone.png" alt="Projet Bew"></a>
+                <a><img id="sixiemeImageCarroussel" src="images/EndarPhone.png" alt="Projet Endar"></a>
+                <a><img id="septiemeImageCarroussel" src="images/HublotPhone.png" alt="Stage Hublot"></a>
+                <a><img id="huitiemeImageCarroussel" src="images/LogoPersoPhone.png" alt="Projet Logo Perso"></a>
+                <a><img id="neuviemeImageCarroussel" src="images/PortefolioV2Phone.png" alt="Projet Portefolio V2"></a>
+                <a><img id="dixiemeImageCarroussel" src="images/ProjetRetroAlicePhone.png" alt="Projet Video Retro"></a>
             </figure>
         </div>
     </article>
@@ -278,7 +261,8 @@
     </article>
 </section>
 <footer class="footer">
-    Cinquin Andy &copy; - tout droits réservés - 72 Avenue Camus, 44000 Nantes | 1250 chemin de la renouillère, 74140 Sciez - SIRET : 880 505
+    Cinquin Andy &copy; - tout droits réservés - 72 Avenue Camus, 44000 Nantes | 1250 chemin de la renouillère, 74140
+    Sciez - SIRET : 880 505
     276 00019 - Hébergement OVH
 </footer>
 </body>
@@ -309,9 +293,15 @@
             animationPhone.play();
             animationDesktop.play();
         }
-        setTimeout(function(){imageAccueil.setAttribute("src", "images/logoAnimeeNoLoop_End.png");},1000);
-        setTimeout(function(){document.getElementById("loader").style.opacity = '0%';},1000);
-        setTimeout(function(){document.getElementById("loader").style.display = 'none';},1400);
+        setTimeout(function () {
+            imageAccueil.setAttribute("src", "images/logoAnimeeNoLoop_End.png");
+        }, 1000);
+        setTimeout(function () {
+            document.getElementById("loader").style.opacity = '0%';
+        }, 1000);
+        setTimeout(function () {
+            document.getElementById("loader").style.display = 'none';
+        }, 1400);
     };
     window.onscroll = function () {
         if (dansLaFenetre(parcours)) {

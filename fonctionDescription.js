@@ -6,7 +6,8 @@ function changementtaillefenetre() {
         i = document.getElementById("septiemeImageCarroussel"), r = document.getElementById("huitiemeImageCarroussel"),
         t = document.getElementById("neuviemeImageCarroussel"), a = document.getElementById("dixiemeImageCarroussel"),
         y = document.getElementById("imagePresentationSiteJulieSommaro"),
-        z = document.getElementById("imagePresentationSiteIsabelleCinquin");
+        z = document.getElementById("imagePresentationSiteIsabelleCinquin"),
+    w = document.getElementById("imagePresentationTutorat");
     document.body.clientWidth >= 680 ? (
         e.src = "images/cinquinMaeva.png",
         n.src = "images/Conseils.png",
@@ -19,7 +20,8 @@ function changementtaillefenetre() {
             t.src = "images/PortefolioV2.png",
             a.src = "images/ProjetRetroAliceDesktop.png",
             y.src = "images/julieSommaro.jpg",
-            z.src = "images/isabelleCinquin.jpg")
+            z.src = "images/isabelleCinquin.jpg",
+        w.src = "images/scratchOverflow.jpg")
         : document.body.clientWidth < 680 && (
                 e.src = "images/cinquinMaevaPhone.png",
                     n.src = "images/ConseilsPhone.png",
@@ -32,5 +34,6 @@ function changementtaillefenetre() {
                     t.src = "images/PortefolioV2Phone.png",
                     a.src = "images/ProjetRetroAlicePhone.png",
                     y.src = "images/julieSommaroPhone.jpg" ,
-                    z.src = "images/isabelleCinquinPhone.jpg")
+                    z.src = "images/isabelleCinquinPhone.jpg",
+                    w.src = "images/scratchOverflowPhone.jpg")
 }
