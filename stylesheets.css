@@ -278,10 +278,12 @@ a:hover div, article:hover .iconHover, article:hover div {
 .buttonTopBTS:hover>span>span:first-child{
     transform:rotate(45deg);
     border: solid 1px #222222;
+    opacity:1;
 }
 .buttonTopBTS:hover>span>span:last-child{
     transform:rotate(0deg);
     border: solid 2px #444444;
+    opacity:1;
 }
 .buttonTopBTS>span{
     position:relative!important;
@@ -310,6 +312,7 @@ a:hover div, article:hover .iconHover, article:hover div {
     top:0;
     border: solid 1px #444444;
     border-radius:2px;
+    opacity:1;
 }
 .buttonTopBTS>span>span:last-child{
     background-color: transparent;
@@ -318,7 +321,7 @@ a:hover div, article:hover .iconHover, article:hover div {
     position:absolute;
     left:0;
     top:0;
-    border: solid 2px #222222;
+    border: solid 2px #319ed5;
     border-radius:2px;
     transform:rotate(45deg);
 }
